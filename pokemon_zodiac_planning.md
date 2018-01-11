@@ -1,6 +1,6 @@
 # Planning for Pokémon Zodiac
 
-## Pokemon to Use
+## Pokémon to Use
 
 ### Possible ones
 - Capricorn = Stantler?
@@ -32,3 +32,7 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 - Capricorn = Rhyhorn
 - Aquarius = Mr. Mime
 - Pisces = Poliwag
+
+## Sample Wireframe
+
+!["Sample Wireframe"](wireframe.png)
