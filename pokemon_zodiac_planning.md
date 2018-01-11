@@ -39,4 +39,4 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 
 ## Style Sheet
 
-!["Style Sheet"](stylesheet1.png)
+!["Style Sheet"](styletile.png)
