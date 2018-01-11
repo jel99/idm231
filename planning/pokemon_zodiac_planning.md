@@ -39,9 +39,12 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 - Aquarius = Mr. Mime
 - Pisces = Poliwag
 
-## Sample Wireframe
+## Sample Wireframes
 
+### Main page
 <img src="wireframe1.png" height="500">
+
+### Clicked on Pokémon image
 <img src="wireframe2.png" height="500">
 
 ## Style Tile
