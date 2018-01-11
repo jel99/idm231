@@ -1,8 +1,14 @@
 # Planning for Pokémon Zodiac
 
+## Description
+
+This website will have 12 Pokémon, one of which is assigned to someone based on their birthday. This could be any of the ones I listed below, in the Possible Pokémon section.
+
+Users will be able to click on the images of Pokémon, which will surround the input form, and also be shown their descriptions and how they relate to their assigned Zodiac.
+
 ## Pokémon to Use
 
-### Possible ones
+### Possible Pokémon
 - Capricorn = Stantler?
 - Aquarius = Vaporeon
 - Pisces = Goldeen
@@ -37,6 +43,6 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 
 !["Sample Wireframe"](wireframe1.png)
 
-## Style Sheet
+## Style Tile
 
-!["Style Sheet"](styletile.png)
+!["Style Tile"](styletile.png)
