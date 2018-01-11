@@ -41,7 +41,8 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 
 ## Sample Wireframe
 
-<img src="wireframe1.png" height="500" style="border: 1px solid black;">
+<img src="wireframe1.png" height="500">
+<img src="wireframe2.png" height="500">
 
 ## Style Tile
 
