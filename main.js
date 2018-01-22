@@ -1,4 +1,9 @@
 
+
+
+
+// Determine the month entered by the user, find corresponding Pokémon to display.
+
 if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
   AstroSign = "Cap";
 } else if ((whichMonth == 11 && whichDayOfMonth >= 22) || (whichMonth == 12 && whichDayOfMonth <= 21)) {
