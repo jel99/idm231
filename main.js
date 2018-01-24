@@ -5,15 +5,25 @@
 // Determine the month entered by the user, find corresponding Pokémon to display.
 
 function test() {
-var whichMonth = document.getElementById('bday').value;
+var bday = document.getElementById('bday').value;
 
-alert(whichMonth);
+var date = bday.split('-');
+
+var whichMonth = date[1];
+var whichDayOfMonth = date[2];
+
+alert(whichMonth + " " + whichDayOfMonth);
 
 }
 
 function getZodiac() {
 
-  //var whichMonth = document.getElementById('bday');
+  var bday = document.getElementById('bday').value;
+
+  var date = bday.split('-');
+
+  var whichMonth = date[1];
+  var whichDayOfMonth = date[2];
 
   var AstroSign;
 
@@ -43,7 +53,7 @@ function getZodiac() {
     AstroSign = "Aqu";
   }
 
-  alert('AstroSign');
+  alert(AstroSign);
 
 }
 
