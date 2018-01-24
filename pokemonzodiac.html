@@ -12,40 +12,50 @@
 
     <div class="content">
 
-      <img src="images/pokemon logo.png" alt="Pokémon Zodiac Logo">
-
-      <p>Fill out the form to find out what Pokémon matches your birth month!</p>
-
-      <form id="pokeInfo" action="">
-
-        <input type="text" name="First Name" id="fName" placeholder="First Name" required><br>
-        <input type="text" name="Last Name" id="lName" placeholder="Last Name" required><br>
-        <input type="date" name="Birthday" id="bday" required><br>
-
-        <button class="submit" onclick=""><img class="arrow" src="images/arrow.png" alt="">Find Your PokéMatch!</button>
-
-      </form>
-
-      <div class="pokebuttons">
-        <img src="images/pokemon-sprites/charizard-sprite.png" alt="Charizard Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/hitmonchan-sprite.png" alt="Hitmonchan Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/doduo-sprite.png" alt="Doduo Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/krabby-sprite.png" alt="Krabby Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/pikachu-sprite.png" alt="Pikachu Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/rattata-sprite.png" alt="Rattata Sprite" class="pokeicon">
-      </div>
+      <header>
+        <img src="images/pokemon logo.png" alt="Pokémon Zodiac Logo">
+        <p>Fill out the form to find out what Pokémon matches your birth month!</p>
+      </header>
       
-      <div class="pokebuttons">
-        <img src="images/pokemon-sprites/clefairy-sprite.png" alt="Clefairy Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/goldeen-sprite.png" alt="Goldeen Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/dragonite-sprite.png" alt="Dragonite Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/rhyhorn-sprite.png" alt="Rhyhorn Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/mrmime-sprite.png" alt="Mr. Mime Sprite" class="pokeicon">
-        <img src="images/pokemon-sprites/poliwag-sprite.png" alt="Poliwag Sprite" class="pokeicon">
-      </div>
+      <main>
+
+        <form id="pokeInfo" action="">
+
+          <input type="text" name="First Name" id="fName" placeholder="First Name" required><br>
+          <input type="text" name="Last Name" id="lName" placeholder="Last Name" required><br>
+          <input type="date" name="Birthday" id="bday" required><br>
+
+          <button class="submit" onclick="test()"><img class="arrow" src="images/arrow.png" alt="">Find Your PokéMatch!</button>
+
+        </form>
+
+        <div class="buttons">
+
+          <div class="pokebuttons">
+            <img src="images/pokemon-sprites/charizard-sprite.png" alt="Charizard Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/hitmonchan-sprite.png" alt="Hitmonchan Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/doduo-sprite.png" alt="Doduo Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/krabby-sprite.png" alt="Krabby Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/pikachu-sprite.png" alt="Pikachu Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/rattata-sprite.png" alt="Rattata Sprite" class="pokeicon">
+          </div>
+          
+          <div class="pokebuttons">
+            <img src="images/pokemon-sprites/clefairy-sprite.png" alt="Clefairy Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/goldeen-sprite.png" alt="Goldeen Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/dragonite-sprite.png" alt="Dragonite Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/rhyhorn-sprite.png" alt="Rhyhorn Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/mrmime-sprite.png" alt="Mr. Mime Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/poliwag-sprite.png" alt="Poliwag Sprite" class="pokeicon">
+          </div>
+
+        </div>
+
+      </main>
 
     </div>
     
+    <script src="main.js"></script>
 
   </body>
 
