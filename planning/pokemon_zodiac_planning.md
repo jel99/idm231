@@ -53,7 +53,7 @@ Users will be able to click on the images of Pokémon, which will surround the i
 - Sagittarius = Stantler? Rapidash?
 
 
-### According this this website
+### According to this website
 
 https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac-sign-your-birthday-tells-you-more-about-your
 
