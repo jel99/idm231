@@ -39,6 +39,22 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 - Aquarius = Mr. Mime
 - Pisces = Poliwag
 
+### According to actual research
+
+- Aries = Charmeleon
+    - Hi there
+- Taurus = Diglet
+- Gemini = Pidgey
+- Cancer = Lapras
+- Leo = Arcanine
+- Virgo = Sandshrew
+- Libra = Dodrio
+- Scorpio = Staryu
+- Sagittarius = Moltres
+- Capricorn = Machoke
+- Aquarius = Dragonite
+- Pisces = Goldeen
+
 ## Sample Wireframes
 
 ### Main page
