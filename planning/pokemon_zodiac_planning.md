@@ -8,6 +8,36 @@ Users will be able to click on the images of Pokémon, which will surround the i
 
 ## Pokémon to Use
 
+### According to actual research
+
+- Aries = Charmeleon (fire)
+    - Like a Charmeleon, you are a confident person who won't stop until you've gotten what you want. One weakness of yours is that you're hot-headed and will scratch anyone who makes you mad.
+- Taurus = Diglett (earth)
+    - As a Diglett, you are reliable, practical, and responsible. You won't let another Diglett down, or let those pesky humans build a dam in your forest.
+- Gemini = Pidgey (air)
+    - 
+- Cancer = Lapras (water)
+    - 
+- Leo = Arcanine (fire)
+    - 
+- Virgo = Sandshrew (earth)
+    - 
+- Libra = Dodrio (air)
+    - 
+- Scorpio = Staryu (water)
+    - 
+- Sagittarius = Moltres (fire)
+    - 
+- Capricorn = Machoke (earth-ish)
+    - 
+- Aquarius = Dragonite (air)
+    - 
+- Pisces = Goldeen (water)
+    - 
+
+(credit to Kristen White)
+
+
 ### Possible Pokémon
 - Capricorn = Stantler?
 - Aquarius = Vaporeon
@@ -21,6 +51,7 @@ Users will be able to click on the images of Pokémon, which will surround the i
 - Libra = Hitmontop? Porygon2?
 - Scorpio = Pinsir? Kabutops? Scyther? Gligar?
 - Sagittarius = Stantler? Rapidash?
+
 
 ### According this this website
 
@@ -38,22 +69,6 @@ https://www.bustle.com/articles/173920-what-pokemon-are-you-based-on-your-zodiac
 - Capricorn = Rhyhorn
 - Aquarius = Mr. Mime
 - Pisces = Poliwag
-
-### According to actual research
-
-- Aries = Charmeleon
-    - Hi there
-- Taurus = Diglet
-- Gemini = Pidgey
-- Cancer = Lapras
-- Leo = Arcanine
-- Virgo = Sandshrew
-- Libra = Dodrio
-- Scorpio = Staryu
-- Sagittarius = Moltres
-- Capricorn = Machoke
-- Aquarius = Dragonite
-- Pisces = Goldeen
 
 ## Sample Wireframes
 
