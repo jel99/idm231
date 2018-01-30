@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Pokémon Zodiac</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="pokemonzodiac.css">
   </head>
 
@@ -14,39 +15,45 @@
 
       <header>
         <img src="images/pokemon logo.png" alt="Pokémon Zodiac Logo">
-        <p>Fill out the form to find out what Pokémon matches your birth month!</p>
+        <p class="infoBox" id="infoBox">Fill out your name and birthday to find out what Pokémon you are most similar to!</p>
       </header>
       
       <main>
 
-        <form id="pokeInfo" action="">
+          <form id="pokeInfo">
 
-          <input type="text" name="First Name" id="fName" placeholder="First Name" required><br>
-          <input type="text" name="Last Name" id="lName" placeholder="Last Name" required><br>
-          <input type="date" name="Birthday" id="bday" required><br>
+            <input type="text" name="First Name" id="fName" placeholder="First Name" required><br>
+            <input type="text" name="Last Name" id="lName" placeholder="Last Name" required><br>
+            <input type="date" name="Birthday" id="bday" required><br>
 
-          <button class="submit" onclick="getZodiac()"><img class="arrow" src="images/arrow.png" alt="">Find Your PokéMatch!</button>
+            <button class="submit" onclick="getZodiac()"><!--<img class="arrow" src="images/arrow.png" alt="">-->Find Your PokéMatch!</button>
 
-        </form>
+            <p class="question" onclick="showInfoBox()">?</p>
+            
+          </form>
+          
+         
 
-        <div class="buttons";>
+
+
+        <div class="buttons">
 
           <div class="pokebuttons">
-            <img src="images/pokemon-sprites/charizard-sprite.png" alt="Charizard Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/hitmonchan-sprite.png" alt="Hitmonchan Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/doduo-sprite.png" alt="Doduo Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/krabby-sprite.png" alt="Krabby Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/pikachu-sprite.png" alt="Pikachu Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/rattata-sprite.png" alt="Rattata Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/charmeleon-sprite.png" alt="Charmeleon Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/diglett-sprite.png" alt="Diglett Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/pidgey-sprite.png" alt="Pidgey Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/lapras-sprite.png" alt="Lapras Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/arcanine-sprite.png" alt="Arcanine Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/sandshrew-sprite.png" alt="Sandshrew Sprite" class="pokeicon">
           </div>
           
           <div class="pokebuttons">
-            <img src="images/pokemon-sprites/clefairy-sprite.png" alt="Clefairy Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/goldeen-sprite.png" alt="Goldeen Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/dodrio-sprite.png" alt="Dodrio Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/staryu-sprite.png" alt="Staryu Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/rapidash-sprite.png" alt="Rapidash Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/machoke-sprite.png" alt="Machoke Sprite" class="pokeicon">
             <img src="images/pokemon-sprites/dragonite-sprite.png" alt="Dragonite Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/rhyhorn-sprite.png" alt="Rhyhorn Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/mrmime-sprite.png" alt="Mr. Mime Sprite" class="pokeicon">
-            <img src="images/pokemon-sprites/poliwag-sprite.png" alt="Poliwag Sprite" class="pokeicon">
+            <img src="images/pokemon-sprites/goldeen-sprite.png" alt="Goldeen Sprite" class="pokeicon">
           </div>
 
         </div>
