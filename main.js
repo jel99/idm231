@@ -1,10 +1,21 @@
 
-
+var charmeleon = document.getElementById('cha');
+var diglett = document.getElementById('dig');
+var pidgey = document.getElementById('pid');
+var lapras = document.getElementById('lap');
+var arcanine = document.getElementById('arc');
+var sandshrew = document.getElementById('san');
+var dodrio = document.getElementById('dod');
+var staryu = document.getElementById('sta');
+var rapidash = document.getElementById('rap');
+var machoke = document.getElementById('mac');
+var dragonite = document.getElementById('dra');
+var goldeen = document.getElementById('gol');
 
 
 // Determine the month entered by the user, find corresponding Pokémon to display.
 
-function getZodiac() {
+function getPokemon() {
 
   var bday = document.getElementById('bday').value;
   var name = document.getElementById('fName').value;
@@ -14,44 +25,56 @@ function getZodiac() {
   var whichMonth = date[1];
   var whichDayOfMonth = date[2];
 
-  var AstroSign;
+  var pokemon;
 
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
-    AstroSign = "Cap";
+    pokemon = 'machoke';
   } else if ((whichMonth == 11 && whichDayOfMonth >= 22) || (whichMonth == 12 && whichDayOfMonth <= 21)) {
-    AstroSign = "Sag";
+    pokemon = 'rapidash';
   } else if ((whichMonth == 10 && whichDayOfMonth >= 24) || (whichMonth == 11 && whichDayOfMonth <= 21)) {
-    AstroSign = "Sco";
+    pokemon = 'staryu';
   } else if ((whichMonth == 9 && whichDayOfMonth >= 23) || (whichMonth == 10 && whichDayOfMonth <= 23)) {
-    AstroSign = "Lib";
+    pokemon = 'dodrio';
   } else if ((whichMonth == 8 && whichDayOfMonth >= 23) || (whichMonth == 9 && whichDayOfMonth <= 22)) {
-    AstroSign = "Vir";
+    pokemon = 'sandshrew';
   } else if ((whichMonth == 7 && whichDayOfMonth >= 23) || (whichMonth == 8 && whichDayOfMonth <= 22)) {
-    AstroSign = "Leo";
+    pokemon = 'arcanine';
   } else if ((whichMonth == 6 && whichDayOfMonth >= 22) || (whichMonth == 7 && whichDayOfMonth <= 22)) {
-    AstroSign = "Can";
+    pokemon = 'lapras';
   } else if ((whichMonth == 5 && whichDayOfMonth >= 21) || (whichMonth == 6 && whichDayOfMonth <= 21)) {
-    AstroSign = "Gem";
+    pokemon = 'pidgey';
   } else if ((whichMonth == 4 && whichDayOfMonth >= 20) || (whichMonth == 5 && whichDayOfMonth <= 20)) {
-    AstroSign = "Tau";
+    pokemon = 'diglett';
   } else if ((whichMonth == 3 && whichDayOfMonth >= 21) || (whichMonth == 4 && whichDayOfMonth <= 19)) {
-    AstroSign = "Ari";
+    pokemon = 'charmeleon';
   } else if ((whichMonth == 2 && whichDayOfMonth >= 19) || (whichMonth == 3 && whichDayOfMonth <= 20)) {
-    AstroSign = "Pis";
+    pokemon = 'goldeen';
   } else if ((whichMonth == 1 && whichDayOfMonth >= 20) || (whichMonth == 2 && whichDayOfMonth <= 18)) {
-    AstroSign = "Aqu";
+    pokemon = 'dragonite';
   }
 
-  alert("So "+name+" looks like you are a "+AstroSign);
+  displayPokedex(pokemon);
 
+  return false;
 }
 
+
 function showInfoBox() {
-  var x = document.getElementById("infoBox");
-  if (x.className === "infoBox") {
-      x.className += " showInfo";
+  var x = document.getElementById('infoBox');
+  if (x.className === 'infoBox') {
+      x.className += ' showInfo';
   } else {
-      x.className = "infoBox";
+      x.className = 'infoBox';
+  }
+}
+
+
+function displayPokedex(pokemon) {
+  if (pokemon == 'dragonite') {
+    
+  }
+  else {
+    
   }
 }
 
@@ -61,9 +84,9 @@ function showInfoBox() {
 For the actual zodiac output, let's have the person's inputted First Name be
 displayed to them in an interesting way.
 
-For example: "Hey [First Name], looks like you're Pokémon zodiac is Charizard!"
+For example: 'Hey [First Name], looks like you're Pokémon zodiac is Charizard!'
 
 Also, in terms of the actual zodiac, in addition to the output showing your Pokémon,
-let's have a 
+let's have the ability to print the output or something.
 
 *************/

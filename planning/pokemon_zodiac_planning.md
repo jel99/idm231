@@ -17,7 +17,7 @@ Users will be able to click on the images of Pokémon, which will surround the i
 - Gemini = Pidgey (air)
     - Like a Pidgey, you are a gentle, affectionate person who doesn't like to get into fights if you don't have to. However, if danger approaches, you will kick up sand into your opponents face to get away. Being nervous like this is one of your weaknesses.
 - Cancer = Lapras (water)
-    - As a Lapras, you are a very loyal, emotional, and sympathetic person. You will ferry your friends safety if they need it. However, you can be moody (possibly since you have been hunted to near extinction), and also insecure.
+    - As a Lapras, you are a very loyal, emotional, and sympathetic person. You will ferry your friends to safety if they need it. However, you can be moody (possibly since you have been hunted to near extinction), and also insecure.
 - Leo = Arcanine (fire)
     - Like an Arcanine, you enjoy being admired for your beauty and magnificence. However, sometimes this admiration can make you a bit arrogant and self-centered. But you also are very warm-hearted, generous, and cheerful, always looking on the bright side of life. You can cheer your friends up easily when they're down.
 - Virgo = Sandshrew (earth)

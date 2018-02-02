@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokémon Zodiac</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+
+    <div class="background-image"></div>
+
+    <div class="content">
+
+      <header>
+        <img class="pokeLogo" src="images/pokemon-logo.png" alt="Pokémon Zodiac Logo">
+        <p class="infoBox" id="infoBox">Fill out your name and birthday to find out what Pokémon you are most similar to!</p>
+      </header>
+      
+      <main>
+
+        <form id="pokeInfo" method="post" onsubmit="getPokemon()">
+
+          <input type="text" name="First Name" id="fName" placeholder="First Name" required><br>
+          <input type="text" name="Last Name" id="lName" placeholder="Last Name" required><br>
+          <input type="date" name="Birthday" id="bday" required><br>
+
+          <button class="submit" ><!--<img class="arrow" src="images/arrow.png" alt="">-->Find Your PokéMatch!</button>
+
+          <p class="question" onclick="showInfoBox()">?</p>
+          
+        </form>
+
+        <div class="dexEntry" id="charmeleonDex">
+          
+          Hey there this is your zodiac reading.
+        </div>
+          
+        <div class="buttons">
+
+          <div class="pokebuttons">
+            <img src="images/pokemon-sprites/charmeleon-sprite.png" alt="Charmeleon Sprite" class="pokeicon" id="cha">
+            <img src="images/pokemon-sprites/diglett-sprite.png" alt="Diglett Sprite" class="pokeicon" id="dig">
+            <img src="images/pokemon-sprites/pidgey-sprite.png" alt="Pidgey Sprite" class="pokeicon" id="pid">
+            <img src="images/pokemon-sprites/lapras-sprite.png" alt="Lapras Sprite" class="pokeicon" id="lap">
+            <img src="images/pokemon-sprites/arcanine-sprite.png" alt="Arcanine Sprite" class="pokeicon" id="arc">
+            <img src="images/pokemon-sprites/sandshrew-sprite.png" alt="Sandshrew Sprite" class="pokeicon" id="san">
+          </div>
+          
+          <div class="pokebuttons">
+            <img src="images/pokemon-sprites/dodrio-sprite.png" alt="Dodrio Sprite" class="pokeicon" id="dod">
+            <img src="images/pokemon-sprites/staryu-sprite.png" alt="Staryu Sprite" class="pokeicon" id="sta">
+            <img src="images/pokemon-sprites/rapidash-sprite.png" alt="Rapidash Sprite" class="pokeicon" id="rap">
+            <img src="images/pokemon-sprites/machoke-sprite.png" alt="Machoke Sprite" class="pokeicon" id="mac">
+            <img src="images/pokemon-sprites/dragonite-sprite.png" alt="Dragonite Sprite" class="pokeicon"  id="dra">
+            <img src="images/pokemon-sprites/goldeen-sprite.png" alt="Goldeen Sprite" class="pokeicon" id="gol">
+          </div>
+
+          <audio>
+            <source src="sounds/charmeleon.wav" type="audio/wav" id="chaAud">
+            <source src="sounds/diglett.wav" type="audio/wav" id="digAud">
+            <source src="sounds/pidgey.wav" type="audio/wav" id="pidAud">
+            <source src="sounds/lapras.wav" type="audio/wav" id="lapAud">
+            <source src="sounds/arcanine.wav" type="audio/wav" id="arcAud">
+            <source src="sounds/sandshrew.wav" type="audio/wav" id="sanAud">
+            <source src="sounds/dodrio.wav" type="audio/wav" id="dodAud">
+            <source src="sounds/staryu.wav" type="audio/wav" id="staAud">
+            <source src="sounds/rapidash.wav" type="audio/wav" id="rapAud">
+            <source src="sounds/machoke.wav" type="audio/wav" id="macAud">
+            <source src="sounds/dragonite.wav" type="audio/wav" id="draAud">
+            <source src="sounds/goldeen.wav" type="audio/wav" id="golAud">
+            
+          </audio>
+
+        </div>
+
+      </main>
+
+    </div>
+    
+    <script src="main.js"></script>
+
+  </body>
+
+</html>
