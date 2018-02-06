@@ -15,26 +15,41 @@
 
       <header>
         <img class="pokeLogo" src="images/pokemon-logo.png" alt="Pokémon Zodiac Logo">
-        <p class="infoBox" id="infoBox">Fill out your name and birthday to find out what Pokémon you are most similar to!</p>
+        <p class="infoBox pokeTextBox" id="infoBox">Fill out your name and birthday to find out what Pokémon you are most similar to!</p>
       </header>
       
       <main>
 
         <form id="pokeInfo" method="post" onsubmit="getPokemon()">
 
-          <input type="text" name="First Name" id="fName" placeholder="First Name" required><br>
-          <input type="text" name="Last Name" id="lName" placeholder="Last Name" required><br>
-          <input type="date" name="Birthday" id="bday" required><br>
+          <input type="text" name="First Name" id="fName" class="pokeTextBox" placeholder="First Name" required><br>
+          <input type="text" name="Last Name" id="lName" class="pokeTextBox" placeholder="Last Name" required><br>
+          <input type="date" name="Birthday" id="bday" class="pokeTextBox" required><br>
 
-          <button class="submit" ><!--<img class="arrow" src="images/arrow.png" alt="">-->Find Your PokéMatch!</button>
+          <button class="submit pokeTextBox" ><!--<img class="arrow" src="images/arrow.png" alt="">-->Find Your PokéMatch!</button>
 
           <p class="question" onclick="showInfoBox()">?</p>
           
         </form>
 
         <div class="dexEntry" id="charmeleonDex">
-          
-          Hey there this is your zodiac reading.
+          <div class"dexPic">
+            <img class="pokePic" src="images/pokemon-pics/charmeleon.png" alt="Charmeleon Image">
+            <p>No. 005</p>
+          </div>
+
+          <div class="dexDesc">
+            CHARMELEON <br>
+            FLAME <br>
+            HT <b>3′ 7″</b> <br>
+            WT <b>41.9lb</b>
+          </div>
+
+          <p class="dexReading">Like a Charmeleon, you are a confident person who won't stop until you've 
+            gotten what you want. One weakness of yours is that you're hot-headed and 
+            will scratch anyone who makes you mad with your razor-sharp claws.</p>
+
+          <button class="closeDex pokeTextBox">Close</button>
         </div>
           
         <div class="buttons">

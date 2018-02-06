@@ -70,10 +70,40 @@ function showInfoBox() {
 
 
 function displayPokedex(pokemon) {
-  if (pokemon == 'dragonite') {
+  if (pokemon == 'charmeleon') {
     
   }
-  else {
+  else if (pokemon == 'diglett') {
+    
+  }
+  else if (pokemon == 'pidgey') {
+    
+  }
+  else if (pokemon == 'lapras') {
+    
+  }
+  else if (pokemon == 'arcanine') {
+    
+  }
+  else if (pokemon == 'sandshrew') {
+    
+  }
+  else if (pokemon == 'dodrio') {
+    
+  }
+  else if (pokemon == 'staryu') {
+    
+  }
+  else if (pokemon == 'rapidash') {
+    
+  }
+  else if (pokemon == 'machoke') {
+    
+  }
+  else if (pokemon == 'dragonite') {
+    
+  }
+  else if (pokemon == 'goldeen') {
     
   }
 }
