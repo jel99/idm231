@@ -1,5 +1,6 @@
 
 (function(){
+  
   var charmeleon = document.getElementById('cha');
   var diglett = document.getElementById('dig');
   var pidgey = document.getElementById('pid');
@@ -12,7 +13,7 @@
   var machoke = document.getElementById('mac');
   var dragonite = document.getElementById('dra');
   var goldeen = document.getElementById('gol');
-})();
+
 
 
 // Determine the month entered by the user, find corresponding Pokémon to display.
@@ -121,6 +122,7 @@ function displayPokedex(zodiac) {
   }
 }
 
+})();
 
 /*************
 
