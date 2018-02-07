@@ -461,6 +461,7 @@ input[type=date] {
 }
 
 .dexReading {
+	font-size: 0.875rem;
 	line-height: 1.5rem;
 	margin: 0;
 }
@@ -475,7 +476,7 @@ input[type=date] {
 	text-transform: uppercase;
 
 	padding: 0.5rem;
-	width: 10px;
+	width: auto;
 	margin: 1rem auto 0 auto;
 	transform: translateX(50%);
 }

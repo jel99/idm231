@@ -1,16 +1,18 @@
 
-var charmeleon = document.getElementById('cha');
-var diglett = document.getElementById('dig');
-var pidgey = document.getElementById('pid');
-var lapras = document.getElementById('lap');
-var arcanine = document.getElementById('arc');
-var sandshrew = document.getElementById('san');
-var dodrio = document.getElementById('dod');
-var staryu = document.getElementById('sta');
-var rapidash = document.getElementById('rap');
-var machoke = document.getElementById('mac');
-var dragonite = document.getElementById('dra');
-var goldeen = document.getElementById('gol');
+(function(){
+  var charmeleon = document.getElementById('cha');
+  var diglett = document.getElementById('dig');
+  var pidgey = document.getElementById('pid');
+  var lapras = document.getElementById('lap');
+  var arcanine = document.getElementById('arc');
+  var sandshrew = document.getElementById('san');
+  var dodrio = document.getElementById('dod');
+  var staryu = document.getElementById('sta');
+  var rapidash = document.getElementById('rap');
+  var machoke = document.getElementById('mac');
+  var dragonite = document.getElementById('dra');
+  var goldeen = document.getElementById('gol');
+})();
 
 
 // Determine the month entered by the user, find corresponding Pokémon to display.
@@ -25,7 +27,7 @@ function getPokemon() {
   var whichMonth = date[1];
   var whichDayOfMonth = date[2];
 
-  var pokemon;
+  var pokemon = '';
 
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     pokemon = 'machoke';
@@ -59,7 +61,7 @@ function getPokemon() {
 }
 
 
-function showInfoBox() {
+function showZodiac() {
   var x = document.getElementById('infoBox');
   if (x.className === 'infoBox') {
       x.className += ' showInfo';
@@ -68,8 +70,19 @@ function showInfoBox() {
   }
 }
 
+// Considering using SWITCH statement here!
+function displayPokedex(zodiac) {
+  switch (zodiac) {
+    case 'charmeleon':
+      console.log(zodiac);
+      break;
 
-function displayPokedex(pokemon) {
+    case 'diglett':
+      alert('diglett');
+      break;
+  }
+  
+  
   if (pokemon == 'charmeleon') {
     
   }
