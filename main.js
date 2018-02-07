@@ -61,7 +61,7 @@ function getPokemon() {
   return false;
 }
 
-
+//Here we can use the .setAttribute() function instead of this. Much cleaner.
 function showZodiac() {
   var x = document.getElementById('infoBox');
   if (x.className === 'infoBox') {
