@@ -1,5 +1,5 @@
 
-(function(){
+//(function(){
   
   var charmeleon = document.getElementById('cha');
   var diglett = document.getElementById('dig');
@@ -13,6 +13,22 @@
   var machoke = document.getElementById('mac');
   var dragonite = document.getElementById('dra');
   var goldeen = document.getElementById('gol');
+  
+  var name = document.getElementById('fName').value;
+
+// Make the Pokémon icon buttons functional
+charmeleon.addEventListener('click', function() {displayPokedex('charmeleon');}, false);
+diglett.addEventListener('click', function() {displayPokedex('diglett');}, false);
+pidgey.addEventListener('click', function() {displayPokedex('pidgey');}, false);
+lapras.addEventListener('click', function() {displayPokedex('lapras');}, false);
+arcanine.addEventListener('click', function() {displayPokedex('arcanine');}, false);
+sandshrew.addEventListener('click', function() {displayPokedex('sandshrew');}, false);
+dodrio.addEventListener('click', function() {displayPokedex('dodrio');}, false);
+staryu.addEventListener('click', function() {displayPokedex('staryu');}, false);
+rapidash.addEventListener('click', function() {displayPokedex('rapidash');}, false);
+machoke.addEventListener('click', function() {displayPokedex('machoke');}, false);
+dragonite.addEventListener('click', function() {displayPokedex('dragonite');}, false);
+goldeen.addEventListener('click', function() {displayPokedex('goldeen');}, false);
 
 
 
@@ -21,7 +37,6 @@
 function getPokemon() {
 
   var bday = document.getElementById('bday').value;
-  var name = document.getElementById('fName').value;
 
   var date = bday.split('-');
 
@@ -56,6 +71,7 @@ function getPokemon() {
     pokemon = 'dragonite';
   }
 
+  console.log(pokemon);
   displayPokedex(pokemon);
 
   return false;
@@ -66,50 +82,74 @@ function displayPokedex(pokemon) {
   switch (pokemon) {
 
     case 'charmeleon':
+      console.log('Ran charmeleon');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'diglett':
+      console.log('Ran diglett');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'pidgey':
+      console.log('Ran pidgey');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'lapras':
+      console.log('Ran lapras');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'arcanine':
+      console.log('Ran arcanine');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'sandshrew':
+      console.log('Ran sandshrew');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'dodrio':
-      howZodiac(pokemon);
+      console.log('Ran dodrio');
+      clearZodiac();
+      showZodiac(pokemon);
       break;
 
     case 'staryu':
+      console.log('Ran staryu');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'rapidash':
-    showZodiac(pokemon);
+      console.log('Ran rapidash');
+      clearZodiac();
+      showZodiac(pokemon);
       break;
 
     case 'machoke':
+      console.log('Ran machoke');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'dragonite':
+      console.log('Ran dragonite');
+      clearZodiac();
       showZodiac(pokemon);
       break;
 
     case 'goldeen':
+      console.log('Ran goldeen');
+      clearZodiac();
       showZodiac(pokemon);
       break;
   }
@@ -117,15 +157,29 @@ function displayPokedex(pokemon) {
 
 
 function showZodiac(pokemon) {
-  
-  document.getElementById(pokemon).setAttribute("class", "dexEntry showZodiac");
 
-  document.getElementById('inputForm').setAttribute("class", "inputForm showZodiac");
+  document.getElementById(pokemon).setAttribute('class', 'dexEntry showZodiac');
+
+  document.getElementById('inputForm').setAttribute('class', 'inputForm showZodiac');
 
 }
 
+function clearZodiac() {
+  var dexEntries = document.getElementsByClassName('dexEntry');
 
-})();
+  for (var i = 0; i < dexEntries.length; i ++) {
+    dexEntries[i].setAttribute('class', 'dexEntry');
+  }
+}
+
+function showForm() {
+  document.getElementById('inputForm').setAttribute('class', 'inputForm');
+}
+
+
+// Could use event "load" to start background music playing
+
+//})();
 
 
 /*************
