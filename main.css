@@ -354,7 +354,29 @@ input[type=date] {
 	100.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }
 
+
 /* Pokedex styling for the zodiac reading */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+    overflow: auto;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {width: 25%;}
+.col-2 {width: 50%;}
+.col-3 {width: 75%;}
+.col-4 {width: 100%;}
+
+@media screen and (min-width: 374px) {
+
+}
+
 .dexEntry {
 	font-size: 1rem;
   	font-family: 'pokemon_gbregular';
@@ -362,7 +384,7 @@ input[type=date] {
 	
 	padding: 1.5rem;
 	margin: 0.3125rem auto;
-	width: 100%;
+	width: 98%;
 	
 	background-color: rgba(255,255,255,1.00);
 	border: 5px solid rgba(76,76,76,1.00);
@@ -377,6 +399,8 @@ input[type=date] {
 
 	animation: openIn 2000ms linear both;
 }
+
+.dexEntry.showDex {display: block;}
 
 @keyframes openIn {
 	0.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -447,13 +471,12 @@ input[type=date] {
 }
 
 .dexPic {
-	width: 33%;
+	text-align: center;
 }
 
 .dexDesc {
 	margin-bottom: 1rem;
 	line-height: 1.75rem;
-	width: 66%;
 }
 
 .dexEntry {
