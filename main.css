@@ -373,14 +373,20 @@ input[type=date] {
 .col-3 {width: 75%;}
 .col-4 {width: 100%;}
 
-@media screen and (min-width: 374px) {
 
+
+@media screen and (max-width: 23.375rem /*374px*/) {
+	[class*="col-"] {
+		width: 100%;
+	}
 }
 
 .dexEntry {
 	font-size: 1rem;
   	font-family: 'pokemon_gbregular';
 	text-transform: uppercase;
+
+	display: none;
 	
 	padding: 1.5rem;
 	margin: 0.3125rem auto;
@@ -396,11 +402,13 @@ input[type=date] {
 				inset 3px 3px 0px rgba(0,0,0,1.00);
 	
 	overflow: auto;
-
-	animation: openIn 2000ms linear both;
 }
 
-.dexEntry.showDex {display: block;}
+.dexEntry.showDex { 
+	display: block;
+	
+	animation: openIn 2000ms linear both;
+}
 
 @keyframes openIn {
 	0.00% { transform: matrix3d(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
@@ -466,12 +474,12 @@ input[type=date] {
 	100.00% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); }
 }
 
-.dexEntry.showZodiac{
-	display: block;
-}
-
 .dexPic {
 	text-align: center;
+}
+
+.pokePic {
+	width: 125px;
 }
 
 .dexDesc {
@@ -489,7 +497,7 @@ input[type=date] {
 	margin: 0;
 }
 
-#pokeInfo.showZodiac {
+.inputForm.showZodiac {
 	display: none;
 }
 
@@ -501,9 +509,7 @@ input[type=date] {
 	padding: 0.5rem;
 	width: auto;
 	margin: 1rem auto 0 auto;
-	transform: translateX(50%);
 }
-
 
 /* Make it look good on other screens */
 

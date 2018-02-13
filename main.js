@@ -28,7 +28,7 @@ function getPokemon() {
   var whichMonth = date[1];
   var whichDayOfMonth = date[2];
 
-  var pokemon = '';
+  var pokemon;
 
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     pokemon = 'machoke';
@@ -61,68 +61,72 @@ function getPokemon() {
   return false;
 }
 
-//Here we can use the .setAttribute() function instead of this. Much cleaner.
-function showZodiac() {
-  var x = document.getElementById('infoBox');
-  if (x.className === 'infoBox') {
-      x.className += ' showInfo';
-  } else {
-      x.className = 'infoBox';
-  }
-}
 
-// Considering using SWITCH statement here!
-function displayPokedex(zodiac) {
-  switch (zodiac) {
+function displayPokedex(pokemon) {
+  switch (pokemon) {
+
     case 'charmeleon':
-      console.log(zodiac);
+      showZodiac(pokemon);
       break;
 
     case 'diglett':
-      alert('diglett');
+      showZodiac(pokemon);
       break;
-  }
-  
-  
-  if (pokemon == 'charmeleon') {
-    
-  }
-  else if (pokemon == 'diglett') {
-    
-  }
-  else if (pokemon == 'pidgey') {
-    
-  }
-  else if (pokemon == 'lapras') {
-    
-  }
-  else if (pokemon == 'arcanine') {
-    
-  }
-  else if (pokemon == 'sandshrew') {
-    
-  }
-  else if (pokemon == 'dodrio') {
-    
-  }
-  else if (pokemon == 'staryu') {
-    
-  }
-  else if (pokemon == 'rapidash') {
-    
-  }
-  else if (pokemon == 'machoke') {
-    
-  }
-  else if (pokemon == 'dragonite') {
-    
-  }
-  else if (pokemon == 'goldeen') {
-    
+
+    case 'pidgey':
+      showZodiac(pokemon);
+      break;
+
+    case 'lapras':
+      showZodiac(pokemon);
+      break;
+
+    case 'arcanine':
+      showZodiac(pokemon);
+      break;
+
+    case 'sandshrew':
+      showZodiac(pokemon);
+      break;
+
+    case 'dodrio':
+      howZodiac(pokemon);
+      break;
+
+    case 'staryu':
+      showZodiac(pokemon);
+      break;
+
+    case 'rapidash':
+    showZodiac(pokemon);
+      break;
+
+    case 'machoke':
+      showZodiac(pokemon);
+      break;
+
+    case 'dragonite':
+      showZodiac(pokemon);
+      break;
+
+    case 'goldeen':
+      showZodiac(pokemon);
+      break;
   }
 }
 
+
+function showZodiac(pokemon) {
+  
+  document.getElementById(pokemon).setAttribute("class", "dexEntry showZodiac");
+
+  document.getElementById('inputForm').setAttribute("class", "inputForm showZodiac");
+
+}
+
+
 })();
+
 
 /*************
 
