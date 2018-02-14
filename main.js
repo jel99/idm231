@@ -13,24 +13,26 @@
   var machoke = document.getElementById('mac');
   var dragonite = document.getElementById('dra');
   var goldeen = document.getElementById('gol');
-  
+
+  // Make the Pokémon icon buttons functional
+  charmeleon.addEventListener('click', function() {displayPokedex('charmeleon');});
+  diglett.addEventListener('click', function() {displayPokedex('diglett');});
+  pidgey.addEventListener('click', function() {displayPokedex('pidgey');});
+  lapras.addEventListener('click', function() {displayPokedex('lapras');});
+  arcanine.addEventListener('click', function() {displayPokedex('arcanine');});
+  sandshrew.addEventListener('click', function() {displayPokedex('sandshrew');});
+  dodrio.addEventListener('click', function() {displayPokedex('dodrio');});
+  staryu.addEventListener('click', function() {displayPokedex('staryu');});
+  rapidash.addEventListener('click', function() {displayPokedex('rapidash');});
+  machoke.addEventListener('click', function() {displayPokedex('machoke');});
+  dragonite.addEventListener('click', function() {displayPokedex('dragonite');});
+  goldeen.addEventListener('click', function() {displayPokedex('goldeen');});
+
+
   var name = document.getElementById('fName').value;
 
-// Make the Pokémon icon buttons functional
-charmeleon.addEventListener('click', function() {displayPokedex('charmeleon');}, false);
-diglett.addEventListener('click', function() {displayPokedex('diglett');}, false);
-pidgey.addEventListener('click', function() {displayPokedex('pidgey');}, false);
-lapras.addEventListener('click', function() {displayPokedex('lapras');}, false);
-arcanine.addEventListener('click', function() {displayPokedex('arcanine');}, false);
-sandshrew.addEventListener('click', function() {displayPokedex('sandshrew');}, false);
-dodrio.addEventListener('click', function() {displayPokedex('dodrio');}, false);
-staryu.addEventListener('click', function() {displayPokedex('staryu');}, false);
-rapidash.addEventListener('click', function() {displayPokedex('rapidash');}, false);
-machoke.addEventListener('click', function() {displayPokedex('machoke');}, false);
-dragonite.addEventListener('click', function() {displayPokedex('dragonite');}, false);
-goldeen.addEventListener('click', function() {displayPokedex('goldeen');}, false);
-
-
+  // Add listener for when page loads to then play background music
+  // window.addEventListener('load', [function], false)
 
 // Determine the month entered by the user, find corresponding Pokémon to display.
 
