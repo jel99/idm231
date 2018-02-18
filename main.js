@@ -31,8 +31,19 @@
 
   var name = document.getElementById('fName').value;
 
-  // Add listener for when page loads to then play background music
-  // window.addEventListener('load', [function], false)
+  // var chaRead = document.getElementById('chaRead');
+  // var digRead = document.getElementById('digRead');
+  // var pidRead = document.getElementById('pidRead');
+  // var lapRead = document.getElementById('lapRead');
+  // var arcRead = document.getElementById('arcRead');
+  // var sanRead = document.getElementById('sanRead');
+  // var dodRead = document.getElementById('dodRead');
+  // var staRead = document.getElementById('staRead');
+  // var rapRead = document.getElementById('rapRead');
+  // var macRead = document.getElementById('macRead');
+  // var draRead = document.getElementById('draRead');
+  // var golRead = document.getElementById('golRead');
+
 
 // Determine the month entered by the user, find corresponding Pokémon to display.
 
@@ -87,84 +98,97 @@ function displayPokedex(pokemon) {
       console.log('Ran charmeleon');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('chaAud');
+
+      // chaRead.textContent = "Ah "+name+" looks like you are a Charmeleon. Like a Charmeleon, you are a confident person who won't stop until you've gotten what you want. One weakness of yours is that you're hot-headed and will scratch anyone who makes you mad with your razor-sharp claws.";
+
       break;
 
     case 'diglett':
       console.log('Ran diglett');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('digAud');
       break;
 
     case 'pidgey':
       console.log('Ran pidgey');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('pidAud');
       break;
 
     case 'lapras':
       console.log('Ran lapras');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('lapAud');
       break;
 
     case 'arcanine':
       console.log('Ran arcanine');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('arcAud');
       break;
 
     case 'sandshrew':
       console.log('Ran sandshrew');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('sanAud');
       break;
 
     case 'dodrio':
       console.log('Ran dodrio');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('dodAud');
       break;
 
     case 'staryu':
       console.log('Ran staryu');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('staAud');
       break;
 
     case 'rapidash':
       console.log('Ran rapidash');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('rapAud');
       break;
 
     case 'machoke':
       console.log('Ran machoke');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('macAud');
       break;
 
     case 'dragonite':
       console.log('Ran dragonite');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('draAud');
       break;
 
     case 'goldeen':
       console.log('Ran goldeen');
       clearZodiac();
       showZodiac(pokemon);
+      playSound('golAud');
       break;
   }
 }
 
 
 function showZodiac(pokemon) {
-
   document.getElementById(pokemon).setAttribute('class', 'dexEntry showZodiac');
-
   document.getElementById('inputForm').setAttribute('class', 'inputForm showZodiac');
-
 }
+
 
 function clearZodiac() {
   var dexEntries = document.getElementsByClassName('dexEntry');
@@ -174,12 +198,23 @@ function clearZodiac() {
   }
 }
 
+
 function showForm() {
   document.getElementById('inputForm').setAttribute('class', 'inputForm');
+  document.getElementById('inputForm').reset();
+}
+
+
+function playSound(pokemon) {
+  var music = document.getElementById(pokemon);
+
+  music.play();
 }
 
 
 // Could use event "load" to start background music playing
+// Add listener for when page loads to then play background music
+// window.addEventListener('load', [function], false)
 
 //})();
 

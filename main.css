@@ -26,6 +26,10 @@ header {
 	margin: 0 0.5rem;
 }
 
+a {
+	text-decoration: none;
+}
+
 /* This is the background region map for the website */
 .background-image {
 	background-image: url('images/kantoregion.png');
@@ -262,7 +266,7 @@ input[type=date] {
 	background-color: rgba(255,255,255,1.00);
 	border: 9px solid rgba(76,76,76,1.00);
 	box-shadow:  inset 4px 4px 0px rgba(0,0,0,1.00), inset -4px -4px 0px rgba(0,0,0,1.00);
-	border-radius: 3px;
+	border-radius: 2px;
 	
 	overflow: auto;
 }
