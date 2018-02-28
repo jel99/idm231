@@ -1,5 +1,7 @@
 //(function(){}
 {
+  const form = document.forms['pokeInfo'];
+  form.addEventListener('submit', getPokemon, false);
   
   var charmeleon = document.getElementById('cha');
   var diglett = document.getElementById('dig');
@@ -48,23 +50,33 @@ var pokemon;
 var name;
 var phrase;
 
-function getPokemon() {
+function getPokemon(event) {
+  event.preventDefault();
 
-  //var bday = document.getElementById('bday').value;
+  const bday = document.getElementById('bday');
+  const date = new Date(bday.value);
 
+  const feedback = document.getElementById('feedback');
 
-  // STILL NEED TO GET THIS TO CORRECT IF THEY PUT IN BAD VALUE!
-  var bday = document.getElementById('bday').value;
-  var date = bday.split('/');
+  console.log('date');
 
-  
-  //var date = bday.split('-');
+  if (isNaN(date)) {
+    bday.focus();
+    bday.value = '';
+    feedback.hidden = false;
+  } else {
+      feedback.hidden = true;
+  }
+
+  const whichMonth = date.getUTCMonth() + 1;
+  const whichDayOfMonth = date.getUTCDate();
+
+  // var bday = document.getElementById('bday').value;
+
+  // var date = bday.split('-');
 
   // var whichMonth = date[1];
   // var whichDayOfMonth = date[2];
-
-  var whichMonth = date[0];
-  var whichDayOfMonth = date[1];
 
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     pokemon = 'machoke';
@@ -118,7 +130,7 @@ function getPhrase(pokemonTemp) {
       /* 7  */"The results are in " + name + ": You are most similar to an " + pokemonT,
       /* 8  */name + ", I'm shocked! You are, in fact, an " + pokemonT,
       /* 9  */"Guess what, " + name + "? You're an " + pokemonT,
-      /* 10 */"Yer an " + pokemonT + " Harry!... I mean " + name,
+      /* 10 */"Yer an " + pokemonT + ", Harry!... I mean " + name,
       /* 11 */"I wish I could be an " + pokemonT + " just like you, " + name
     ];
   }
@@ -134,7 +146,7 @@ function getPhrase(pokemonTemp) {
       /* 7  */"The results are in " + name + ": You are most similar to a " + pokemonT,
       /* 8  */name + ", I'm shocked! You are, in fact, a " + pokemonT,
       /* 9  */"Guess what, " + name + "? You're a " + pokemonT,
-      /* 10 */"Yer a " + pokemonT + " Harry!... I mean " + name,
+      /* 10 */"Yer a " + pokemonT + ", Harry!... I mean " + name,
       /* 11 */"I wish I could be a " + pokemonT + " just like you, " + name
     ];
   }
