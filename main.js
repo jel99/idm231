@@ -1,8 +1,31 @@
 //(function(){}
 {
+
   const form = document.forms['pokeInfo'];
-  form.addEventListener('submit', getPokemon, false);
-  
+  form.addEventListener('submit', checkDate, false);
+
+  const feedback = document.getElementById('feedback');
+
+  // Check to see if the date entered is in the right format
+  var isDate;
+  function checkDate(event) {
+    event.preventDefault();
+
+    const bday = document.getElementById('bday');
+    const date = new Date(bday.value);
+    console.log(date);
+
+    if (isNaN(date)) {
+      bday.focus();
+      bday.value = '';
+      feedback.hidden = false;
+    } else {
+        feedback.hidden = true;
+        getPokemon();
+    }
+  }
+
+  // Grabbing the Pokémon buttons
   var charmeleon = document.getElementById('cha');
   var diglett = document.getElementById('dig');
   var pidgey = document.getElementById('pid');
@@ -50,33 +73,13 @@ var pokemon;
 var name;
 var phrase;
 
-function getPokemon(event) {
-  event.preventDefault();
+function getPokemon() {
 
   const bday = document.getElementById('bday');
   const date = new Date(bday.value);
 
-  const feedback = document.getElementById('feedback');
-
-  console.log('date');
-
-  if (isNaN(date)) {
-    bday.focus();
-    bday.value = '';
-    feedback.hidden = false;
-  } else {
-      feedback.hidden = true;
-  }
-
   const whichMonth = date.getUTCMonth() + 1;
   const whichDayOfMonth = date.getUTCDate();
-
-  // var bday = document.getElementById('bday').value;
-
-  // var date = bday.split('-');
-
-  // var whichMonth = date[1];
-  // var whichDayOfMonth = date[2];
 
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     pokemon = 'machoke';

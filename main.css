@@ -84,6 +84,18 @@ a {
 	cursor: default;
 }
 
+.feedback {
+	max-width: 42.3125rem;
+	margin: 0 auto;
+	margin-top: 0.5rem;
+	
+	padding: 0.5rem;
+	border-radius: 0.125rem;
+	line-height: 1.5rem;
+	text-align: center;
+	cursor: default;
+}
+
 /* Form styling */
 
 .inputForm {
