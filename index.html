@@ -21,18 +21,28 @@
 
     <div class="background-image"></div>
 
+      <div class="music" id="music">
+        <img class="music-button" id="music-button" src="images/music-on.svg" alt="Music On Button">
+        <span class="music-text" id="music-text">Pause Music</span>
+      </div>
+
+
     <div class="content">
       <div id="top"></div>
+
       <header>
         <img class="pokeLogo" src="images/pokemon-logo.png" alt="Pokémon Zodiac Logo">
       </header>
-      
+     
       <div id="dexBox"></div>
 
       <main>
 
         <div class="inputForm" id="inputForm">
-          <p class="infoBox pokeTextBox">Fill out your name and birthday to find out what Pokémon you are most similar to!</p>
+          <p class="infoBox pokeTextBox">
+            Fill out your name and birthday to find out what Pokémon you are most similar to!
+            <button class="question pokeTextBox" id="question" onclick="displayPokedex('profoak')"> ? </button>
+          </p>
 
           <form action="index.html" id="pokeInfo" method="post">
             
@@ -77,7 +87,7 @@
             <div class="col-4">
               <p class="dexReading" id="chaRead"></p>
             
-              <button class="closeDex pokeTextBox" onclick="closeZodiac('charmeleon')">Close</button>
+              <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
             </div> 
           </div>
 
@@ -109,7 +119,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="digRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('diglett')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -144,7 +154,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="pidRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('pidgey')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -179,7 +189,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="lapRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('lapras')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -214,7 +224,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="arcRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('arcanine')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -249,7 +259,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="sanRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('sandshrew')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -284,7 +294,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="dodRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('dodrio')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -319,7 +329,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="staRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('staryu')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -354,7 +364,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="rapRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('rapidash')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -389,7 +399,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="macRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('machoke')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -424,7 +434,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="draRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('dragonite')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div> 
               </div>
   
@@ -459,13 +469,62 @@
                 <div class="col-4">
                   <p class="dexReading" id="golRead"></p>
                 
-                  <button class="closeDex pokeTextBox" onclick="closeZodiac('goldeen')">Close</button>
+                  <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
                 </div>
               </div>
   
-            </div>
-  
           </div>
+  
+        </div>
+
+        <!-- Prof Oak (Help) -->
+        <div class="dexEntry" id="profoak">
+          <div class="row">
+            <div class="col-2">
+              <div class="dexPic">
+                <img class="pokePic" src="images/profoak.png" alt="Prof Oak Image">
+                <p><b>No. Help</b></p>
+              </div>
+            </div>
+
+            <div class="col-2">
+              <div class="dexDesc">
+                PROF OAK <br>
+                PROFESSOR <br>
+                HT <b>5′ 9″</b> <br>
+                WT <b>162lb</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="dexLine"></div>
+
+          <div class="row">
+            <div class="col-4">
+              <p class="dexReadingOak" id="oakRead"></p>
+
+              <div class="inputForm">
+                <form action="" id="oakInfo">
+                  
+                  <p class="dexReadingOak">Put your First Name here:</p>
+                  <input type="text" name="firstName" class="pokeTextBox" placeholder="First Name"><br>
+                  <p class="dexReadingOak">Put your Last Name here:</p>
+                  <input type="text" name="lastName" class="pokeTextBox" placeholder="Last Name"><br>
+                  <p class="dexReadingOak">Put your birthday here, in the format MM/DD/YYYY:</p>
+                  <input type="date" name="birthday" class="pokeTextBox" placeholder="MM/DD/YYYY"><br>
+      
+                  <p class="dexReadingOak">Then finally, click this to find your Pokématch:</p>
+                  <input type="submit" class="submitOak pokeTextBox" value="Find Your PokéMatch!">
+      
+                </form>
+      
+              </div>
+              <p class="dexReadingOak">Now close this, and enter your details in the form!</p>
+              <button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button>
+            </div> 
+          </div>
+
+        </div>
           
 
         <!-- Pokemon Icon buttons at bottom of zodiac page --> 
@@ -554,6 +613,11 @@
           <audio id="golAud">
             <source src="sounds/goldeen.wav" type="audio/wav">
             <source src="sounds/goldeen.mp3" type="audio/mpeg">
+          </audio>
+
+          <audio id="profAud">
+            <source src="sounds/profoaksound.wav" type="audio/wav">
+            <source src="sounds/profoaksound.mp3" type="audio/mpeg">
           </audio>
 
 

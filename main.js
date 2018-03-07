@@ -1,17 +1,50 @@
 {
 
-  // var bg_music = document.getElementById('pokeMusic');
-  // bg_music.loop = true;
-  // bg_music.volume = 0.2;
-  // window.addEventListener('load', function() {bg_music.play();}, false);
-  
+  // Start playing Pokémon music in background if user is browsing on desktop
+  window.addEventListener('load', function() {bgMusic()}, false);
+  window.addEventListener('resize', function() {bgMusic()}, false);
 
-  const form = document.forms['pokeInfo'];
-  form.addEventListener('submit', checkDate, false);
+  var bg_music = document.getElementById('pokeMusic');
+  function bgMusic() {
+    var screen_width = window.innerWidth;
+
+    if (screen_width > 1024) {
+      bg_music.loop = true;
+      bg_music.volume = 0.5;
+      bg_music.play();
+      console.log('music playing');
+    } else {
+      bg_music.pause();
+      console.log('music paused');
+    }
+  }
+
+  // Allow user to mute and play the background music
+  var music_button = document.getElementById('music-button');
+  music_button.addEventListener('click', function() {PlayPause()}, false);
+
+  function PlayPause() {
+    var which_state = music_button.getAttribute('src');
+    
+    if (which_state === 'images/music-on.svg') {
+      bg_music.pause();
+      music_button.setAttribute('src', 'images/music-off.svg')
+      document.getElementById('music-text').innerHTML = 'Play Music';
+      console.log('music paused');
+    } else {
+      bg_music.play();
+      music_button.setAttribute('src', 'images/music-on.svg')
+      document.getElementById('music-text').innerHTML = 'Pause Music';
+      console.log('music playing');
+    }
+  }
+
+  // Check to see if the date entered is in the right format
+  const pokeform = document.forms['pokeInfo'];
+  pokeform.addEventListener('submit', checkDate, false);
 
   const feedback = document.getElementById('feedback');
 
-  // Check to see if the date entered is in the right format
   var isDate;
   function checkDate(event) {
     event.preventDefault();
@@ -71,6 +104,7 @@
   var macRead = document.getElementById('macRead');
   var draRead = document.getElementById('draRead');
   var golRead = document.getElementById('golRead');
+  var oakRead = document.getElementById('oakRead');
 
 
 // Determine the month entered by the user, find corresponding Pokémon to display.
@@ -345,6 +379,20 @@ function displayPokedex(pokemon) {
       showZodiac(pokemon);
       playSound('golAud');
       break;
+
+    case 'profoak':
+      console.log('Ran prof oak help');
+      clearZodiac();
+
+      if (name == "") {
+        oakRead.textContent = "Why hello there! Looks like you could use some help. Here's some instructions to get you started:";
+      } else {
+        oakRead.textContent = "Why hello there, " + name + "! Looks like you could use some help. Here's some instructions to get you started:";
+      }
+
+      showZodiac(pokemon);
+      playSound('profAud');
+      break;
   }
 }
 
@@ -363,20 +411,6 @@ function clearZodiac() {
   for (var i = 0; i < dexEntries.length; i ++) {
     dexEntries[i].setAttribute('class', 'dexEntry');
   }
-}
-
-function closeZodiac(pokemon) {
-  var dexEntry = document.getElementById(pokemon);
-
-  dexEntry.classList.add('closeZodiac');
-
-  dexEntry.addEventListener('transitionend', function() {
-    dexEntry.classList.remove('closeZodiac');
-    dexEntry.classList.remove('showZodiac');
-    console.log('zodiac is gone');
-  }, false);
-
-  showForm();
 }
 
 
@@ -398,12 +432,10 @@ function getName() {
   return fname;
 }
 
-
 // Play the Pokémon's cry when the zodiac is opened
 function playSound(pokemon) {
   var cry = document.getElementById(pokemon);
-  cry.volume = 0.5;
-
+  cry.volume = 0.4;
   cry.play();
 }
 

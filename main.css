@@ -49,6 +49,27 @@ a {
 	z-index: -1;
 }
 
+.music {
+	display: none;
+	width: 50%;
+
+	z-index: 2;
+}
+
+.question {
+	margin: 1rem 1rem 0 0;
+	padding: 0.3rem 0.5rem;
+
+	width: 100%;
+
+	font-family: 'pokemon_gbregular';
+	font-size: 1rem;
+	  
+	cursor: pointer;
+
+	z-index: 10;
+}
+
 .content {
   z-index: 1;
   margin: 0 auto;
@@ -96,13 +117,14 @@ a {
 	cursor: default;
 }
 
+
 /* Form styling */
 
 .inputForm {
 	margin: 0.5rem;
 }
 
-#pokeInfo {
+#pokeInfo, #oakInfo {
 	height: auto;
 	width: auto;
 	margin-top: 1rem;
@@ -129,20 +151,18 @@ input[type=text], input[type=date] {
   	margin: 1.25rem auto;
 }
 
-.submit, .question {
-  font-size: 1rem;
-  font-family: 'pokemon_gbregular';
+.submit, .submitOak {
+	font-size: 1rem;
+	font-family: 'pokemon_gbregular';
 	text-transform: uppercase;
 
-  border-radius: 0.125rem;
-  padding: 0.5rem;
-  width: auto;
-  height: 3.125rem;
-  line-height: 1rem;
-  margin: 0.3125rem auto;
-}
-
-.submit { 
+	border-radius: 0.125rem;
+	padding: 0.5rem;
+	width: auto;
+	height: 3.125rem;
+	line-height: 1rem;
+	margin: 0.3125rem auto;
+ 
 	cursor: pointer;
 	line-height: 1.2rem;
 	text-align: right;
@@ -150,22 +170,13 @@ input[type=text], input[type=date] {
 	width: 100%;
 	max-width: 22rem;
 	min-height: 3.125rem;
+}
 
+.submit {
 	background-image: url('images/arrow.png');
 	background-repeat: no-repeat;
 	background-position: 2% 50%;
 	background-size: 0.625rem /*10px*/;
-}
-
-/* .arrow {
-  height: 0.75rem;
-  padding-right: 0.625rem;
-	display: inline-block;
-	position: absolute;
-  float: left;
-
-  animation: FIXLATER 3000ms linear both;
-	animation-iteration-count: infinite;
 }
 
 
@@ -190,7 +201,6 @@ input[type=text], input[type=date] {
 .pokeicon:hover {
 	cursor: pointer;
 	animation: jump 1000ms linear both;
-	animation-iteration-count: infinite;
 }
 
 @keyframes jump {
@@ -413,6 +423,13 @@ input[type=text], input[type=date] {
 	margin: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
+.dexReadingOak {
+	text-align: left;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	margin: 1rem 1rem 0 1rem;
+}
+
 .inputForm.showZodiac {
 	display: none;
 }
@@ -505,5 +522,32 @@ input[type=text], input[type=date] {
 
 	.inputForm {
 		margin: 0 auto;
+	}
+
+	.question {
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 64rem /*1024px*/) {
+	.music {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	
+	.music-button {
+		width: 2rem;
+		margin: 1rem 0 0 1rem;
+
+		cursor: pointer;
+	}
+	
+	.music-text {
+		font-size: 0.8rem;
+		margin: 1rem 0 0 1rem;
+
+		cursor: default;
 	}
 }
