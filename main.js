@@ -1,5 +1,10 @@
-//(function(){}
 {
+
+  // var bg_music = document.getElementById('pokeMusic');
+  // bg_music.loop = true;
+  // bg_music.volume = 0.2;
+  // window.addEventListener('load', function() {bg_music.play();}, false);
+  
 
   const form = document.forms['pokeInfo'];
   form.addEventListener('submit', checkDate, false);
@@ -360,6 +365,20 @@ function clearZodiac() {
   }
 }
 
+function closeZodiac(pokemon) {
+  var dexEntry = document.getElementById(pokemon);
+
+  dexEntry.classList.add('closeZodiac');
+
+  dexEntry.addEventListener('transitionend', function() {
+    dexEntry.classList.remove('closeZodiac');
+    dexEntry.classList.remove('showZodiac');
+    console.log('zodiac is gone');
+  }, false);
+
+  showForm();
+}
+
 
 // Show the name/date entry form again
 function showForm() {
@@ -382,10 +401,12 @@ function getName() {
 
 // Play the Pokémon's cry when the zodiac is opened
 function playSound(pokemon) {
-  var music = document.getElementById(pokemon);
+  var cry = document.getElementById(pokemon);
+  cry.volume = 0.5;
 
-  music.play();
+  cry.play();
 }
+
 
 
 // Could use event "load" to start background music playing
@@ -393,17 +414,3 @@ function playSound(pokemon) {
 // window.addEventListener('load', [function], false)
 
 }
-//})();
-
-
-/*************
-
-For the actual zodiac output, let's have the person's inputted First Name be
-displayed to them in an interesting way.
-
-For example: 'Hey [First Name], looks like you're Pokémon zodiac is Charizard!'
-
-Also, in terms of the actual zodiac, in addition to the output showing your Pokémon,
-let's have the ability to print the output or something.
-
-*************/

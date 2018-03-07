@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110994948-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110994948-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
       gtag('config', 'UA-110994948-1');
-    </script>
+    </script> -->
 
     <meta charset="utf-8">
     <title>Pokémon Zodiac</title>
@@ -77,7 +77,7 @@
             <div class="col-4">
               <p class="dexReading" id="chaRead"></p>
             
-              <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+              <button class="closeDex pokeTextBox" onclick="closeZodiac('charmeleon')">Close</button>
             </div> 
           </div>
 
@@ -109,7 +109,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="digRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('diglett')">Close</button>
                 </div> 
               </div>
   
@@ -144,7 +144,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="pidRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('pidgey')">Close</button>
                 </div> 
               </div>
   
@@ -179,7 +179,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="lapRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('lapras')">Close</button>
                 </div> 
               </div>
   
@@ -214,7 +214,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="arcRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('arcanine')">Close</button>
                 </div> 
               </div>
   
@@ -249,7 +249,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="sanRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('sandshrew')">Close</button>
                 </div> 
               </div>
   
@@ -284,7 +284,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="dodRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('dodrio')">Close</button>
                 </div> 
               </div>
   
@@ -319,7 +319,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="staRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('staryu')">Close</button>
                 </div> 
               </div>
   
@@ -354,7 +354,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="rapRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('rapidash')">Close</button>
                 </div> 
               </div>
   
@@ -389,7 +389,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="macRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('machoke')">Close</button>
                 </div> 
               </div>
   
@@ -424,7 +424,7 @@
                 <div class="col-4">
                   <p class="dexReading" id="draRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('dragonite')">Close</button>
                 </div> 
               </div>
   
@@ -459,8 +459,8 @@
                 <div class="col-4">
                   <p class="dexReading" id="golRead"></p>
                 
-                  <a href="#top"><button class="closeDex pokeTextBox" onclick="clearZodiac(), showForm()">Close</button></a>
-                </div> 
+                  <button class="closeDex pokeTextBox" onclick="closeZodiac('goldeen')">Close</button>
+                </div>
               </div>
   
             </div>
@@ -489,6 +489,11 @@
             <a href="#dexBox"><img src="images/pokemon-sprites/goldeen-sprite.png" alt="Goldeen Sprite" class="pokeicon" id="gol"></a>
           </div>
 
+          <!-- Audio that plays in the background -->
+          <audio id="pokeMusic">
+            <source src="sounds/pokemonmusic.wav" type="audio/wav">
+            <source src="sounds/pokemonmusic.mp3" type="audio/mpeg">
+          </audio>
 
           <!-- All the Pokémon sounds for when their zodiac is opened --> 
           <audio id="chaAud">
