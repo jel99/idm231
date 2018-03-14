@@ -1,6 +1,8 @@
 {
 
   // Start playing Pokémon music in background if user is browsing on desktop
+  var isPaused;
+
   window.addEventListener('load', function() {bgMusic()}, false);
   window.addEventListener('resize', function() {bgMusic()}, false);
 
@@ -8,12 +10,12 @@
   function bgMusic() {
     var screen_width = window.innerWidth;
 
-    if (screen_width > 1024) {
+    if (screen_width > 1024 && !isPaused) {
       bg_music.loop = true;
       bg_music.volume = 0.5;
       bg_music.play();
       console.log('music playing');
-    } else {
+     } else {
       bg_music.pause();
       console.log('music paused');
     }
@@ -23,16 +25,18 @@
   var music_button = document.getElementById('music-button');
   music_button.addEventListener('click', function() {PlayPause()}, false);
 
-  function PlayPause() {
+  function PlayPause() {  
     var which_state = music_button.getAttribute('src');
-    
+
     if (which_state === 'images/music-on.svg') {
       bg_music.pause();
+      isPaused = true; //To prevent music from playing again upon window resize
       music_button.setAttribute('src', 'images/music-off.svg')
       document.getElementById('music-text').innerHTML = 'Play Music';
       console.log('music paused');
     } else {
       bg_music.play();
+      isPaused = false;
       music_button.setAttribute('src', 'images/music-on.svg')
       document.getElementById('music-text').innerHTML = 'Pause Music';
       console.log('music playing');
@@ -43,23 +47,61 @@
   const pokeform = document.forms['pokeInfo'];
   pokeform.addEventListener('submit', checkDate, false);
 
-  const feedback = document.getElementById('feedback');
+  var feedback = document.getElementById('feedback');
 
-  var isDate;
   function checkDate(event) {
+    console.log('checkdate called');
     event.preventDefault();
 
-    const bday = document.getElementById('bday');
+    var bday = document.getElementById('bday');
+
     const date = new Date(bday.value);
     console.log(date);
 
-    if (isNaN(date)) {
+    // var date_test = bday.split("/");
+    // console.log(date_test);
+
+    // var whichMonth = date_test[0];
+    // var whichDayOfMonth = date_test[1];
+    // console.log(whichMonth + '/' + whichDayOfMonth);
+
+    // var illegalDate;
+    // if (whichMonth == 2 && whichDayOfMonth == 30) {
+    //   illegalDate = true;
+    //   console.log('illegalDate = true');
+    // }
+    // else if (whichMonth == 2 && whichDayOfMonth == 31)
+    //   illegalDate = true;
+    // else if (whichMonth == 4 && whichDayOfMonth == 31)
+    //   illegalDate = true;
+    // else if (whichMonth == 6 && whichDayOfMonth == 31)
+    //   illegalDate = true;
+    // else if (whichMonth == 9 && whichDayOfMonth == 31)
+    //   illegalDate = true;
+    // else if (whichMonth == 11 && whichDayOfMonth == 31)
+    //   illegalDate = true;
+    // else {
+    //   illegalDate = false;
+
+    //   const date = new Date(bday.value);
+    //   console.log(date);
+    // }
+
+    // const whichMonth = date.getUTCMonth() + 1;
+    // const whichDayOfMonth = date.getUTCDate();
+
+    if  (isNaN(date)) {
+      feedback.innerHTML = "Please enter a valid date in this format: \nMM/DD/YYYY";
+      console.log('date error');
       bday.focus();
       bday.value = '';
       feedback.hidden = false;
     } else {
         feedback.hidden = true;
+        console.log('no date error');
         getPokemon();
+
+        bday.value = date;
     }
   }
 
@@ -119,6 +161,7 @@ function getPokemon() {
 
   const whichMonth = date.getUTCMonth() + 1;
   const whichDayOfMonth = date.getUTCDate();
+
 
   if ((whichMonth == 12 && whichDayOfMonth >= 22) || (whichMonth == 1 && whichDayOfMonth <= 19)) {
     pokemon = 'machoke';
