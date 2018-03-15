@@ -49,6 +49,7 @@
 
   var feedback = document.getElementById('feedback');
 
+  // Start checkDate function
   function checkDate(event) {
     console.log('checkdate called');
     event.preventDefault();
@@ -58,51 +59,45 @@
     const date = new Date(bday.value);
     console.log(date);
 
-    // var date_test = bday.split("/");
-    // console.log(date_test);
+    var invalid_check = fixDate();
 
-    // var whichMonth = date_test[0];
-    // var whichDayOfMonth = date_test[1];
-    // console.log(whichMonth + '/' + whichDayOfMonth);
-
-    // var illegalDate;
-    // if (whichMonth == 2 && whichDayOfMonth == 30) {
-    //   illegalDate = true;
-    //   console.log('illegalDate = true');
-    // }
-    // else if (whichMonth == 2 && whichDayOfMonth == 31)
-    //   illegalDate = true;
-    // else if (whichMonth == 4 && whichDayOfMonth == 31)
-    //   illegalDate = true;
-    // else if (whichMonth == 6 && whichDayOfMonth == 31)
-    //   illegalDate = true;
-    // else if (whichMonth == 9 && whichDayOfMonth == 31)
-    //   illegalDate = true;
-    // else if (whichMonth == 11 && whichDayOfMonth == 31)
-    //   illegalDate = true;
-    // else {
-    //   illegalDate = false;
-
-    //   const date = new Date(bday.value);
-    //   console.log(date);
-    // }
-
-    // const whichMonth = date.getUTCMonth() + 1;
-    // const whichDayOfMonth = date.getUTCDate();
-
-    if  (isNaN(date)) {
+    if  (isNaN(date) || invalid_check) {
       feedback.innerHTML = "Please enter a valid date in this format: \nMM/DD/YYYY";
-      console.log('date error');
+      console.log('date error: invalid date entered');
       bday.focus();
       bday.value = '';
       feedback.hidden = false;
     } else {
         feedback.hidden = true;
-        console.log('no date error');
+        console.log('no date error :)');
+        
         getPokemon();
-
-        bday.value = date;
     }
+  }
+
+  // This will check to see if the date is an invalid date, such as 2/30, 2/31, 4/31, etc.
+  function fixDate() {
+
+    var bday = document.getElementById('bday').value;
+
+    var date = bday.split('/');
+
+    var month = date[0];
+    console.log('Month is ' + month);
+    var day = date[1];
+    console.log('Day is ' + day);
+
+    date_to_check = month + '/' + day;
+
+    var invalid_date;
+
+    if (date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
+      invalid_date = true;
+    } else {
+      invalid_date = false;
+    }
+
+    return invalid_date;
   }
 
   // Grabbing the Pokémon buttons
