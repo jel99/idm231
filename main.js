@@ -1,43 +1,21 @@
 {
 
-  // Start playing Pokémon music in background if user is browsing on desktop
-  var isPaused;
-
-  window.addEventListener('load', function() {bgMusic()}, false);
-  window.addEventListener('resize', function() {bgMusic()}, false);
-
-  var bg_music = document.getElementById('pokeMusic');
-  function bgMusic() {
-    var screen_width = window.innerWidth;
-
-    if (screen_width > 1024 && !isPaused) {
-      bg_music.loop = true;
-      bg_music.volume = 0.5;
-      bg_music.play();
-      console.log('music playing');
-     } else {
-      bg_music.pause();
-      console.log('music paused');
-    }
-  }
-
   // Allow user to mute and play the background music
+  var bg_music = document.getElementById('pokeMusic');
   var music_button = document.getElementById('music-button');
   music_button.addEventListener('click', function() {PlayPause()}, false);
 
   function PlayPause() {  
     var which_state = music_button.getAttribute('src');
 
-    if (which_state === 'images/music-on.svg') {
+    if (which_state === 'images/pause.svg') {
       bg_music.pause();
-      isPaused = true; //To prevent music from playing again upon window resize
-      music_button.setAttribute('src', 'images/music-off.svg')
+      music_button.setAttribute('src', 'images/play.svg')
       document.getElementById('music-text').innerHTML = 'Play Music';
       console.log('music paused');
     } else {
       bg_music.play();
-      isPaused = false;
-      music_button.setAttribute('src', 'images/music-on.svg')
+      music_button.setAttribute('src', 'images/pause.svg')
       document.getElementById('music-text').innerHTML = 'Pause Music';
       console.log('music playing');
     }
@@ -59,9 +37,28 @@
     const date = new Date(bday.value);
     console.log(date);
 
-    var invalid_check = fixDate();
+    ////////////////////////////////////////////////////////////////////////
+    // Check for an invalid date
+    var bday_test = document.getElementById('bday').value;
+    var date_test = bday_test.split('/');
 
-    if  (isNaN(date) || invalid_check) {
+    var month = date_test[0];
+    console.log('Month is ' + month);
+    var day = date_test[1];
+    console.log('Day is ' + day);
+
+    date_to_check = month + '/' + day;
+
+    var invalid_date;
+
+    if (date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
+      invalid_date = true;
+    } else {
+      invalid_date = false;
+    }
+    ////////////////////////////////////////////////////////////////////////
+
+    if  (isNaN(date) || invalid_date) {
       feedback.innerHTML = "Please enter a valid date in this format: \nMM/DD/YYYY";
       console.log('date error: invalid date entered');
       bday.focus();
@@ -76,29 +73,12 @@
   }
 
   // This will check to see if the date is an invalid date, such as 2/30, 2/31, 4/31, etc.
-  function fixDate() {
+  // function fixDate() {
 
-    var bday = document.getElementById('bday').value;
+    
 
-    var date = bday.split('/');
-
-    var month = date[0];
-    console.log('Month is ' + month);
-    var day = date[1];
-    console.log('Day is ' + day);
-
-    date_to_check = month + '/' + day;
-
-    var invalid_date;
-
-    if (date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
-      invalid_date = true;
-    } else {
-      invalid_date = false;
-    }
-
-    return invalid_date;
-  }
+  //   return invalid_date;
+  // }
 
   // Grabbing the Pokémon buttons
   var charmeleon = document.getElementById('cha');
