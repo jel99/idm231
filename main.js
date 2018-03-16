@@ -33,28 +33,32 @@
     event.preventDefault();
 
     var bday = document.getElementById('bday');
-
     const date = new Date(bday.value);
     console.log(date);
 
     ////////////////////////////////////////////////////////////////////////
     // Check for an invalid date
     var bday_test = document.getElementById('bday').value;
-    var date_test = bday_test.split('/');
-
-    var month = date_test[0];
-    console.log('Month is ' + month);
-    var day = date_test[1];
-    console.log('Day is ' + day);
-
-    date_to_check = month + '/' + day;
 
     var invalid_date;
+    if (bday_test.includes('/')){
 
-    if (date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
-      invalid_date = true;
+      var date_test = bday_test.split('/');
+
+      var month = date_test[0];
+      console.log('Month is ' + month);
+      var day = date_test[1];
+      console.log('Day is ' + day);
+
+      date_to_check = month + '/' + day;
+
+      if (date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
+        invalid_date = true;
+      } else {
+        invalid_date = false;
+      }
     } else {
-      invalid_date = false;
+      invalid_date = true;
     }
     ////////////////////////////////////////////////////////////////////////
 
