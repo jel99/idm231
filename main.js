@@ -72,13 +72,6 @@
     }
   }
 
-  // This will check to see if the date is an invalid date, such as 2/30, 2/31, 4/31, etc.
-  // function fixDate() {
-
-    
-
-  //   return invalid_date;
-  // }
 
   // Grabbing the Pokémon buttons
   var charmeleon = document.getElementById('cha');
@@ -456,11 +449,5 @@ function playSound(pokemon) {
   cry.volume = 0.4;
   cry.play();
 }
-
-
-
-// Could use event "load" to start background music playing
-// Add listener for when page loads to then play background music
-// window.addEventListener('load', [function], false)
 
 }
