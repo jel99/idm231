@@ -49,10 +49,12 @@
       console.log('Month is ' + month);
       var day = date_test[1];
       console.log('Day is ' + day);
+      var year = date_test[2];
+      console.log('Year is ' + day);
 
       date_to_check = month + '/' + day;
 
-      if (date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
+      if (year.length != 4 || date_to_check == '2/30' || date_to_check == '2/31' || date_to_check == '4/31' || date_to_check == '6/31' || date_to_check == '9/31' || date_to_check == '11/31') {
         invalid_date = true;
       } else {
         invalid_date = false;
