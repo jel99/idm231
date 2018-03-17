@@ -78,6 +78,15 @@ a {
 .pokeTextBox {
 	background: white;
 	border: 1px solid white;
+
+	-webkit-box-shadow: 0 1px 0 1px black,
+						inset 0 1px 0 1px black,
+						0 0 0 1px black,
+						inset 0 0 0 1px black;
+	-moz-box-shadow: 0 1px 0 1px black,
+						inset 0 1px 0 1px black,
+						0 0 0 1px black,
+						inset 0 0 0 1px black;
 	box-shadow: 0 1px 0 1px black,
 				inset 0 1px 0 1px black,
 				0 0 0 1px black,
@@ -133,6 +142,9 @@ a {
 }
 
 input[type=text], input[type=date] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
 	font-size: 1rem;
 	font-family: 'pokemon_gbregular';
 	text-transform: uppercase;
@@ -144,6 +156,19 @@ input[type=text], input[type=date] {
 	height: 3.125rem;
 	line-height: 1rem;
 	margin: 0.3125rem auto;
+
+	-webkit-box-shadow: 0 1px 0 1px black,
+						inset 0 1px 0 1px black,
+						0 0 0 1px black,
+						inset 0 0 0 1px black;
+	-moz-box-shadow: 0 1px 0 1px black,
+						inset 0 1px 0 1px black,
+						0 0 0 1px black,
+						inset 0 0 0 1px black;
+	box-shadow: 0 1px 0 1px black,
+				inset 0 1px 0 1px black,
+				0 0 0 1px black,
+				inset 0 0 0 1px black;
 }
 
 /* input[type=date] { */
