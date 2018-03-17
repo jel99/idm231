@@ -141,7 +141,7 @@ a {
 	overflow: auto;
 }
 
-input[type=text], input[type=date] {
+input[type=text] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 
@@ -171,7 +171,6 @@ input[type=text], input[type=date] {
 				inset 0 0 0 1px black;
 }
 
-/* input[type=date] { */
 #bday {
   	margin: 1.25rem auto;
 }
